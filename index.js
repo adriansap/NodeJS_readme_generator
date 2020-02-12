@@ -1,5 +1,7 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+const axios = require("axios");
+
 
 inquirer
     .prompt([
@@ -47,17 +49,8 @@ inquirer
             type: "input",
             message: "Please provide information on Questions:",
             name: "questions"
-        },
-        {
-            type: "input",
-            message: "Please provide url to GitHub Profile Picture",
-            name: "picture"
-        },
-        {
-            type: "input",
-            message: "Please provide GitHub email:",
-            name: "email"
         }
+
 
     ])
     .then(function (response) {
@@ -79,7 +72,7 @@ inquirer
                 if (err) {
                     return console.log(err);
                 }
-                console.log("The file was saved!");
+                // console.log("The file was saved!");
             });
 
             //Description 
@@ -144,17 +137,38 @@ inquirer
                 }
                 // console.log("The file was saved!");
             });
-            fs.appendFile("final-readme.md", "## Email" + "\n" + "\n" + text.email + "\n" + "\n", function (err) {
-                if (err) {
-                    return console.log(err);
-                }
-                // console.log("The file was saved!");
-            });
+
+
+            inquirer
+                .prompt({
+                    message: "Enter your GitHub username",
+                    name: "username"
+                })
+                .then(function ({ username }) {
+                    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+
+                    axios
+                        .get(queryUrl)
+                        .then(function (res) {
+                            // console.log(res.data); //prints the whole response which is an array of objects
+
+                            // var theAvatarLink = res.data[1]owner.avatar_url //answer to get avatar***
+                            const { avatar_url } = res.data[1].owner;
+                            fs.appendFile("final-readme.md", "## GitHub Avatar" + "\n" + "\n" + avatar_url + "\n" + "\n", function (err) {
+                                if (err) {
+                                    return console.log(err);
+                                }
+                                console.log("Your Readme was saved as final-readme.md!");
+                            });
+
+                        })
+                });
+
 
         });
 
 
-        ;
+
 
 
 

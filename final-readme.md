@@ -1,46 +1,42 @@
-# Readme Generator
+# a
 
 ## Description
 
-It is a node.js based readme file generator.
-
-## Table Of Contents
-
-1. Usage (#Usage)
-2. Installation (#Installation)
-3. Tests (#Tests)
-4. Questions (#Questions)
-5. Licensing (#Licensing)
-
-## Usage
-
-To use simply follow step 3 of installation steps .
+a
 
 ## Installation
 
-1. Type npm init in terminal (macOS) or prompt (windows) to create JSON file, leave all fields blank by pressing enter for each prompt. 2. Type npm install inquirer to install the inquirer module from npm. 3. Type 'node index' in terminal to run the program.
+a
 
-## Tests
+## Table Of Contents
 
-It has been tested during the week of 02/10/2020.
+a
+
+## Usage
+
+a
 
 ## Questions
 
-No major questions, just waiting on user reviews for further upgrades.
-
-## Licensing
-
-No licensing on this version.
+a
 
 ## GitHub
 
-http://github/photo
-
-## Email
-
-email@github.com
+undefined
 
 ## Contributing
 
-Kind help of course TAs
+a
+
+## Tests
+
+a
+
+## Licensing
+
+a
+
+## GitHub Avatar
+
+https://avatars1.githubusercontent.com/u/13891816?v=4
 
