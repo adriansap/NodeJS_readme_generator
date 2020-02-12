@@ -18,46 +18,46 @@ inquirer
             message: "Please provide Table of Contents:",
             name: "table"
         },
-        // {
-        //     type: "input",
-        //     message: "Please provide Installation Steps:",
-        //     name: "installation"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide information on Usage:",
-        //     name: "usage"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide information on Licensing",
-        //     name: "licensing"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide information on Contributing:",
-        //     name: "contributing"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide information on Tests:",
-        //     name: "tests"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide information on Questions:",
-        //     name: "questions"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide url to GitHub Profile Picture",
-        //     name: "picture"
-        // },
-        // {
-        //     type: "input",
-        //     message: "Please provide GitHub email:",
-        //     name: "email"
-        // }
+        {
+            type: "input",
+            message: "Please provide Installation Steps:",
+            name: "installation"
+        },
+        {
+            type: "input",
+            message: "Please provide information on Usage:",
+            name: "usage"
+        },
+        {
+            type: "input",
+            message: "Please provide information on Licensing",
+            name: "licensing"
+        },
+        {
+            type: "input",
+            message: "Please provide information on Contributing:",
+            name: "contributing"
+        },
+        {
+            type: "input",
+            message: "Please provide information on Tests:",
+            name: "tests"
+        },
+        {
+            type: "input",
+            message: "Please provide information on Questions:",
+            name: "questions"
+        },
+        {
+            type: "input",
+            message: "Please provide url to GitHub Profile Picture",
+            name: "picture"
+        },
+        {
+            type: "input",
+            message: "Please provide GitHub email:",
+            name: "email"
+        }
 
     ])
     .then(function (response) {
@@ -83,7 +83,68 @@ inquirer
             });
 
             //Description 
-            fs.appendFile("final-readme.md", "## Description" + "\n" + text.description + "\n", function (err) {
+            fs.appendFile("final-readme.md", "## Description" + "\n" + "\n" + text.description + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+
+            //Table of Contents
+            fs.appendFile("final-readme.md", "## Table Of Contents" + "\n" + "\n" + text.table + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+
+            //Installation
+            fs.appendFile("final-readme.md", "## Installation" + "\n" + "\n" + text.installation + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+
+            fs.appendFile("final-readme.md", "## Usage" + "\n" + "\n" + text.usage + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+
+            fs.appendFile("final-readme.md", "## Licensing" + "\n" + "\n" + text.licensing + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+            fs.appendFile("final-readme.md", "## Contributing" + "\n" + "\n" + text.contributing + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+
+            fs.appendFile("final-readme.md", "## Tests" + "\n" + "\n" + text.tests + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+            fs.appendFile("final-readme.md", "## Questions" + "\n" + "\n" + text.questions + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+            fs.appendFile("final-readme.md", "## GitHub" + "\n" + "\n" + text.picture + "\n" + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                // console.log("The file was saved!");
+            });
+            fs.appendFile("final-readme.md", "## Email" + "\n" + "\n" + text.email + "\n" + "\n", function (err) {
                 if (err) {
                     return console.log(err);
                 }
@@ -93,9 +154,7 @@ inquirer
         });
 
 
-        console.log(text.title); //works
-        console.log(text.description);
-        console.log(text.table);
+        ;
 
 
 
