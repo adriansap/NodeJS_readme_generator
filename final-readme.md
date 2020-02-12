@@ -4,10 +4,6 @@
 
 a
 
-## Installation
-
-a
-
 ## Table Of Contents
 
 a
@@ -16,15 +12,15 @@ a
 
 a
 
-## Questions
+## Licensing
 
 a
 
-## GitHub
-
-undefined
-
 ## Contributing
+
+a
+
+## Questions
 
 a
 
@@ -32,11 +28,11 @@ a
 
 a
 
-## Licensing
+## Installation
 
 a
 
 ## GitHub Avatar
 
-https://avatars1.githubusercontent.com/u/13891816?v=4
+![Image description](https://avatars1.githubusercontent.com/u/13891816?v=4)
 

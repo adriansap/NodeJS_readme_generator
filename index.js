@@ -131,12 +131,7 @@ inquirer
                 }
                 // console.log("The file was saved!");
             });
-            fs.appendFile("final-readme.md", "## GitHub" + "\n" + "\n" + text.picture + "\n" + "\n", function (err) {
-                if (err) {
-                    return console.log(err);
-                }
-                // console.log("The file was saved!");
-            });
+
 
 
             inquirer
@@ -154,7 +149,7 @@ inquirer
 
                             // var theAvatarLink = res.data[1]owner.avatar_url //answer to get avatar***
                             const { avatar_url } = res.data[1].owner;
-                            fs.appendFile("final-readme.md", "## GitHub Avatar" + "\n" + "\n" + avatar_url + "\n" + "\n", function (err) {
+                            fs.appendFile("final-readme.md", "## GitHub Avatar" + "\n" + "\n" + "![Image description](" + avatar_url + ")" + "\n" + "\n", function (err) {
                                 if (err) {
                                     return console.log(err);
                                 }
