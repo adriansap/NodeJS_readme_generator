@@ -1,14 +1,15 @@
 # a
 
-## Table Of Contents
-
--[installation]
--[ usage]
--[ licenses]
-
 ## Description
 
 a
+
+## Table Of Contents
+-[usage](#usage)
+
+-[installation](#installation)
+
+-[licenses](#licenses)
 
 ## Installation
 

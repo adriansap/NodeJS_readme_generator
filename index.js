@@ -17,7 +17,7 @@ inquirer
         },
         {
             type: "input",
-            message: "Please provide Table of Contents (use ',' to separate each topic):",
+            message: "Table of Contents (use ',' to separate each topic and end with '.'):",
             name: "table"
         },
         {
@@ -82,21 +82,51 @@ inquirer
                 }
                 // console.log("The file was saved!");
             });
-
+            //************************************************************************************************************************** */
             //Table of Contents
-            var preFormattedString = text.table;
-            var preFormattedString2 = "-[" + preFormattedString + "]";
-            var formattedString = preFormattedString2.split(",").join("]" + "\n" + "-[")
-
-            // + text.table.split(",").join(")" + "\n" + "(")); //flag
-
-            fs.appendFile("final-readme.md", "## Table Of Contents" + "\n" + "\n" + formattedString + "\n" + "\n", function (err) {
+            fs.appendFile("final-readme.md", "## Table Of Contents" + "\n", function (err) {
                 if (err) {
                     return console.log(err);
                 }
                 // console.log("The file was saved!");
             });
 
+            var word = "";
+            var array = [];
+            var preFormattedString = text.table;
+
+
+
+            for (i = 0; i < preFormattedString.length; i++) {
+                if (preFormattedString[i] == ",") {
+                    array.push(word);
+                    word = "";
+                }
+                else if (preFormattedString[i] == ".") {
+                    array.push(word);
+                    word = "";
+                }
+                else {
+                    word = word + preFormattedString[i];
+                }
+            }
+
+            console.log(array)
+
+
+            var wordConcat1 = "";
+            for (j = 0; j < array.length; j++) {
+                wordConcat1 = "-[" + array[j] + "]" + "(#" + array[j] + ")";
+                // console.log(wordConcat1);
+                fs.appendFile("final-readme.md", wordConcat1 + "\n" + "\n", function (err) {
+                    if (err) {
+                        return console.log(err);
+                    }
+                    // console.log("The file was saved!");
+                });
+
+            }
+            //************************************************************************************************************************** */
             //Installation
             fs.appendFile("final-readme.md", "## Installation" + "\n" + "\n" + text.installation + "\n" + "\n", function (err) {
                 if (err) {

@@ -1,1 +1,1 @@
-{"title":"a","description":"a","table":"installation, usage, licenses","installation":"a","usage":"a","licensing":"a","contributing":"a","tests":"a","questions":"a"}
+{"title":"a","description":"a","table":"installation,usage,licenses.","installation":"a","usage":"a","licensing":"a","contributing":"a","tests":"a","questions":"a"}
