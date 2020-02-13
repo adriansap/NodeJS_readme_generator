@@ -1,14 +1,16 @@
 # a
 
+## Table Of Contents
+
+-[installation]
+-[ usage]
+-[ licenses]
+
 ## Description
 
 a
 
-## Table Of Contents
-
-a
-
-## Usage
+## Installation
 
 a
 
@@ -16,11 +18,11 @@ a
 
 a
 
-## Contributing
+## Usage
 
 a
 
-## Questions
+## Contributing
 
 a
 
@@ -28,7 +30,7 @@ a
 
 a
 
-## Installation
+## Questions
 
 a
 

@@ -17,7 +17,7 @@ inquirer
         },
         {
             type: "input",
-            message: "Please provide Table of Contents:",
+            message: "Please provide Table of Contents (use ',' to separate each topic):",
             name: "table"
         },
         {
@@ -84,7 +84,13 @@ inquirer
             });
 
             //Table of Contents
-            fs.appendFile("final-readme.md", "## Table Of Contents" + "\n" + "\n" + text.table + "\n" + "\n", function (err) {
+            var preFormattedString = text.table;
+            var preFormattedString2 = "-[" + preFormattedString + "]";
+            var formattedString = preFormattedString2.split(",").join("]" + "\n" + "-[")
+
+            // + text.table.split(",").join(")" + "\n" + "(")); //flag
+
+            fs.appendFile("final-readme.md", "## Table Of Contents" + "\n" + "\n" + formattedString + "\n" + "\n", function (err) {
                 if (err) {
                     return console.log(err);
                 }
