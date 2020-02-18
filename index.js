@@ -111,7 +111,7 @@ inquirer
                 }
             }
 
-            console.log(array)
+            // console.log(array)
 
 
             var wordConcat1 = "";
